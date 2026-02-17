@@ -11,6 +11,8 @@ Requires:
     - Pillow: pip install Pillow
 """
 
+from __future__ import annotations
+
 import re
 from pathlib import Path
 from typing import List, Tuple, Optional, Dict
