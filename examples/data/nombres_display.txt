@@ -1,0 +1,3 @@
+# Nombres de display personalizados — ejemplo
+# Formato: NombreCamelCase = APELLIDO, Nombre
+# DavidLozanoGaray = LOZANO GARAY, David

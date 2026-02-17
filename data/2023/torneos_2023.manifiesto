@@ -1,0 +1,26 @@
+# Temporada de Torneos 2023
+# Formato: Fechas se especifican como DD-MM-YYYY seguido por el nombre del evento despues del caracter #
+# Torneos especificados por cada archivo adoptan el nombre despues de cada fecha.
+# Soporta: .mdb, .txt, .jpeg, .jpg, .png
+
+01-04-2023 # Cubascrabble Varadero 2023
+CUBASCRABBLE 2023 (bolsa completa).mdb
+CUBASCRABBLE 2023 (2da partida).mdb
+
+01-05-2023  # Austral Montevideo 2023
+Austral_2023_Montevideo.jpeg
+
+01-06-2023  # Andino Caracas 2023
+Andino 2023.jpeg
+
+01-07-2023  # Norcenca Panama 2023
+Norcenca_2023_Panama_Partida_1.jpeg
+Norcenca_2023_Panama_Partida_2.jpeg
+
+01-08-2023  # Europeo Castellon 2023
+Europeo_Castellon_2023.jpeg
+
+01-11-2023  # Mundial Costa Rica 2023
+Partida1Mund23_ok.mdb
+Partida2Mund23_ok.mdb
+Partida3Mund23_ok.mdb

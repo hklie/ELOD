@@ -1,0 +1,317 @@
+# Alias de jugadores - unifica nombres con diferentes ortografías
+# Formato: nombre_canónico = alias1, alias2, ...
+# El nombre canónico (izquierda) será el que se use en los resultados
+
+# 2022 aliases
+AiranPérez = AiranPerez
+OscarDíaz = OscarDiaz
+SolangeDíaz = SolangeDiaz, Solange
+XavierPiqué = XaviPiqué
+JoséLima = JoseALima
+EduardoOrtiz = GastonOrtiz
+
+# 2022-2023 cross-year aliases (accent variations)
+AntonioAlvarez = AntonioÁlvarez
+CarlosGarcia = CarlosGarcía
+JuanGarcia = JuanGarcía
+InmaGonzalez = InmaGonzález
+JoanLazaro = JoanLázaro
+JoseMariaRiera = JoseMaríaRiera
+AlbertoRodriguez = AlbertoRodríguez
+
+# Accent variations detected by --check-names
+AdriánBalajovsky = AdrianBalajovsky
+BenjamínOlaizola = BenjaminOlaizola
+CésarAlmengor = CesarAlmengor
+EduardoFernández = EduardoFernandez
+GracielaGonzález = GracielaGonzalez
+HéctorKlie = HectorKlie
+LuisCarestía = LuisCarestia
+MaríaMartaGismondi = MariaMartaGismondi
+MónicaAranovich = MonicaAranovich
+RaúlCañas = RaulCañas
+RubénFalconett = RubenFalconett
+
+# Typos detected by --check-names
+SeleneDelgado = SelendeDelgado
+LeaMarcioni = LiaMarcioni
+EnriqueCortés = EnriqueCortesA
+
+# Manual confirmations
+BetoMora = AlbertoMora, ALBERTOMORA
+DiegoLattuf = DiegoLainuf, DIEGOLATUFF
+MiguelLattuf = MiguelLainuf, MIGUELLATUFF
+JavierLattuf = JavierLainuf, JAVIERLATUFF
+KarloChowell = KARLOCHOWELL
+KarlaChowell = KarlaAChowell, KARLACHOWELL
+
+# 2024 UPPERCASE variations
+SergeEmig = SERGEEMIG
+ArantxaDelgado = ARANTXADELGADO
+CristinaSanchez = CRISTINASANCHEZ
+JuanGarcia = JUANGARCIA
+VicentaMansilla = VICENTAMANSILLA
+EnricHernandez = EnricHernández
+LuisPicciochi = LUISPICCIOCHI
+BenjamínOlaizola = BENJAMINOLAIZOLA
+HoracioMoavro = HORACIOMOAVRO
+CristianAyala = CRISTIANAYALA
+MarinaColson = MARINACOLSON
+AiranPérez = AIRANPEREZ
+CarlosGarcia = CARLOSGARCIA
+EnricHernandez = ENRICHERNANDEZ
+EduardoFernández = EDUARDOFERNANDEZ
+AntonioAlvarez = ANTONIOALVAREZ
+JoséGonzález = JOSEGONZALEZ
+LuisCarestía = LUISCARESTIA
+RicardoBondino = RICARDOBONDINO
+SeleneDelgado = SELENEDELGADO
+NormaGarza = NORMAGARZA
+DianaPerozo = DIANAPEROZO
+MarcosAraque = MARCOSARAQUE
+EricGómez = ERICGOMEZ
+LeaMarcioni = LEAMARCIONI
+SocratisAlichanidis = SOKRATISALICHANIDIS
+BetoRomero = BETOROMERO
+JoanLazaro = JOANLAZARO
+NemeMoreno = NEMESIOMORENO
+MónicaAranovich = MONICAARANOVICH
+RaúlCañas = RAULCARRILLO
+RaquelTopel = RAQUELTOPEL, (F)RAQUELTOPEL
+CésarAlmengor = CESARALMENGOR
+MaríaMartaGismondi = MARIAMARTAGISMONDI
+PepeBaynat = PEPEBAYNAT
+JoseMariaRiera = JOSEMARIARIERA
+InmaGonzalez = INMACULADAGONZALEZ
+IsaacFalconer = IssacFalconer, ISAACFALCONER
+NelsonVerastegui = NELSONVERASTEGUI, NelsonVerástegui
+DanielaDecena = DANIELADECENA
+CarlosMartínez = CARLOSMARTINEZ
+UrielReyna = URIELREYNA
+AdánLópez = ADANLOPEZ
+LucasMateoLozano = LUCASLOZANO
+BrandonUrielOliva = BRANDONOLIVA
+MarianaAyala = MARIAVICTORIAGIL
+BeatrizAcuña = BEATRIZACUÑA
+DavidLozanoGaray = DAVIDLOZANO
+
+# 2024 (F) prefix = Female category entries (same players)
+MariaInesdelaCruz = (F)MARIAINESDELACRUZ, MaríaInésdelaCruz
+HéctorKlie = (F)HECTORKLIE
+YolandaHackshaw = (F)YOLANDAHACKSHAW
+AlejandroTerenzani = (F)ALEJANDROTERENZANI
+RosarioSuárez = (F)ROSARIOSUAREZ
+AdriánBalajovsky = AdrianBajalovski, (F)ADRIANBALAJOVSKY
+IsabelRodrigo = (F)ISABELRODRIGO
+JoseVicenteGil = (F)JOSEVICENTEGIL
+MerryWheaton = (F)MERRYWHEATON
+RosariodelaCruz = (F)MARIAROSARIODELACRUZ
+ConiVerastegui = ConiVerástegui, (F)CONCEPCIONVERASTEGUI
+RicardoSavegh = (F)RICARDOSAYEGH
+
+# 2024 typos/spelling variations
+JosefinaTrelles = JOSEFINA
+JoséHernández = JOSEFERNANDEZ
+FernandoReySaravia = FERNADOREYSARAVIA
+VerónicaGigueaux = VERONICAGIQUEAUX
+HéctorPerezo = HECTORPEROZOHERNANDEZ
+HéctorPerezoPulido = HECTORANDREZPEROZOPULIDO
+WilmaPulido = WILMAPULIDOPEROZO
+XavierPiqué = XAVIPIQUE
+DeyanuraMarrero = DEYANIRAMARRERO
+FcoJavierGuerrero = JavierGuerrero
+JoséLima = JoseLima
+
+# Cuba Scrabble 2024 first-name entries
+RaquelTopel = RAQUEL
+RichardVelázquez = RICHARD, RICHARDVELAZQUEZ
+ArturoAlonso = ARTURO, ARTUROALONSO
+MiguelStevens = MIGUEL
+AlejandroPorto = ALEJANDRO
+DavierSánchez = DAVIER
+RolandoGuadalupe = ROLANDO
+YosvanyMontout = YOSVANY
+JackselynEstévez = JACKSELYN
+JulkyArias = JULKY
+KevinSamuel = KEVIN
+
+# 2024 duplicates
+RubénFalconett = RUBENDARIOFALCONETT
+DianaPerozo = (F)DANAPEROZO
+
+# 2024 Mundial Granada proper casing
+NigelRichards = NIGELRICHARDS
+EnmaMorris = ENMAMORRIS
+MiguelRivera = MIGUELRIVERA
+MaríadeArcos = MARIADEARCOS
+JuanCarlosAyala = JUANCARLOSAYALA
+HelenTrocel = HELENTROCEL
+MiguelMuñoz = MIGUELC.MUÑOZ
+EvaTsalapati = EVATSALAPATI
+JoaquínSánchez = JOAQUINSANCHEZ
+JoséLuisRodríguez = JOSELUISRODRIGUEZ
+KunihikoKuroda = (F)KUNIHIKOKURODA
+YvetteBlanco = (F)YVETTEBLANCO
+JesúLuchini = (F)JESULUCHINI
+FernandoManrique = FERNANDOMANRIQUE
+MiguelÁngelHenares = MIGUELANGELHENARES
+RhyTaripa = (F)RHYTARIPA
+LigiaGalindo = LIGIAGALINDO
+MaripiliGarcía = MARIPILIGARCIA
+
+# Cuba Scrabble 2024 proper casing (unique players)
+RaúlBáez = RAUL, RAULBAEZ, RaulBaez, RaulBáez
+
+# Additional accent/spelling duplicates
+RichardVelázquez = RichardVelazquez, RICHARDVELAZQUEZ
+LuarBáez = LuarBaez
+YosvanyMontout = YosvaniMontout
+DiosbelSarduy = DiosbellSarduy
+AntonioCatalá = AntonioCatala
+JoséGonzález = JoseGonzalez
+AdriánBalajovsky = AdrianBalajoski
+
+# 2025 Mundial Santiago de Chile (LASTNAME,Firstname format)
+# Use semicolons (;) as delimiter when aliases contain commas
+JesúsOrtega = JesusOrtega; ORTEGA,Jesús
+RhyTaripa = RhytaRipa; RIPA,Rhyta
+RubénFalconett = RubenFalconet
+RosariodelaCruz = DelaCruzRosario; DELACRUZ,Rosario
+VerónicaGigueaux = VeronicaGuiqueaux
+IsaacFalconer = IsaccFalconer
+KarloChowell = KarloAChowell; CHOWELL,Karlo
+CristinaSanchez = CristinaShanchez
+JoséGonzález = GONZALEZ,J; GONZALEZ,José
+# Single aliases with commas need semicolon prefix to prevent comma splitting
+RaquelTopel = ;TOPEL,Raquel
+KunihikoKuroda = ;KURODA,Kunihiko
+DeyanuraMarrero = ;MARRERO,Deyanira
+RolandoGuevara = ;GUEVARA,Rolando
+LilianaSandi = ;SANDI,Liliana
+
+# More 2025 LASTNAME,Firstname aliases (semicolon prefix for comma names)
+NigelRichards = ;RICHARDS,Nigel
+BenjamínOlaizola = ;OLAIZOLA,Benjamín
+LuisPicciochi = ;PICCIOCHI,Luis
+SergeEmig = ;EMIG,Serge
+EduardoOrtiz = ;ORTIZ,Eduardo
+HoracioMoavro = ;MOAVRO,Horacio
+JuanCarlosAyala = AYALA,JuanCarlos; AYALA,JUAN
+DavidLozanoGaray = ;LOZANO,David
+DanielTunnard = ;TUNNARD,Daniel
+RichardVelázquez = ;VELAZQUEZ,Richard
+MariaInesdelaCruz = ;DELACRUZ,MaríaInés
+CristianAyala = ;AYALA,Cristian
+MarcosAraque = ;ARAQUE,Marcos
+FernandoManrique = ;MANRIQUE,Fernando
+PepeBaynat = ;BAYNAT,Pepe
+SeleneDelgado = ;DELGADO,Selene
+AntonioAlvarez = ;ALVAREZ,Antonio
+HéctorOlmos = ;OLMOS,Héctor
+LucasMateoLozano = ;LOZANO,Lucas
+BetoMora = ;MORA,Beto
+RodrigoAlarcón = ;ALARCON,Rodrigo
+NormaGarza = ;GARZA,Norma
+RicardoBondino = ;BONDINO,Ricardo
+KarinaDajch = ;DAJCH,Karina
+MarcosPantoja = ;PANTOJA,Marcos
+DiegoMartinezViademonte = ;MARTINEZVIADEMONTE,Diego
+MarianaOrtega = ;ORTEGA,Mariana
+RosarioSuárez = ;SUAREZCAMARA,Rosario
+RaúlCañas = ;CAÑAS,Raúl
+HéctorKlie = ;KLIE,Héctor
+MaríaMartaGismondi = ;GISMONDI,MaríaMarta
+ElenaLazo = ;LAZO,Elena
+LuisCarestía = ;CARESTIA,Luis
+LuisAcevedo = ;ACEVEDO,Luis
+AlejandroTerenzani = ;TERENZANI,Alejandro
+NobelLópez = ;LOPEZ,Nobel
+EvaDiana = ;DIANA,Eva
+EricGómez = ;GOMEZ,Eric
+JesúLuchini = ;LUCHINI,MaríadeJesús
+JohannaNossa = ;NOSSA,Johanna
+VíctorSanhueza = ;SANHUEZA,Víctor
+SocratisAlichanidis = ;ALICHANIDIS,Sokratis
+YolandaHackshaw = ;HACSHAW,Yolanda
+FernandoReySaravia = ;REYSARAVIA,Fernando
+
+# Cubascrabble Varadero 2025 - single name/surname entries
+HoracioMoavro = Horacio, Moavro
+RolandoGuadalupe = Guadalupe
+MiguelStevens = Stevens
+OdalysFiguerola = Odalys
+AlejandroPorto = Porto
+RichardVelázquez = Richard
+IsaacFalconer = Falconer
+AlejandroBenitez = Benitez
+AdriánBalajovsky = Adrian
+MarcosPantoja = Marcos
+YosvanyMontout = Yosvani
+LuarBáez = Luar
+ArturoAlonso = Arturo
+RolandoGuevara = Guevara
+DiosbelSarduy = Diosbel
+GracielaGonzález = Graciela
+RaquelTopel = Raquel
+LucasMateoLozano = LucasLozano
+BeatrizAcuña = Beatriz
+JorgeReal = Jorgito
+RaúlBáez = Raul
+RodrigoAlarcón = Rodrigo
+
+# Additional Cubascrabble 2025 clarifications
+AntonioCatalá = Tony
+AmadoDelPino = Amado
+JosefinaTrelles = Chepy
+OctavioRodriguez = Octavio
+MaríaMartaGismondi = MariaMarta
+
+# Andino Bogotá 2022 spelling variations
+LilianaVelasco = LilianaVelazco
+
+# Additional duplicates identified
+YosvanyMontout = Yosvany
+RoccoLaguzzi = Laguzzi
+LauraGilCordero = LauraGil
+EduardoLazdin = Lazdin
+
+# 2025 Duplicate merges and spelling corrections
+# MariaInesdelaCruz duplicates
+MariaInesdelaCruz = MInésdelaCruz
+
+# MaríaMartaGismondi duplicates
+MaríaMartaGismondi = MaríaMarta
+
+# DiegoMartinezViademonte duplicates
+DiegoMartinezViademonte = DiegoViademonte
+
+# Melendez duplicates - merge to RamónMelendez
+RamónMelendez = RamonMelendez, RamónAlbertoMelendez
+
+# Romero duplicates - AlbertoDanielRomero is BetoRomero
+BetoRomero = AlbertoDanielRomero
+
+# Spelling corrections (canonical name = typo/variant in source data)
+AgustínNoronha = AgustínNoroña
+VerónicaGiqueaux = VerónicaGigueaux, VeronicaGuiqueaux, VERONICAGIQUEAUX
+RicardoSayegh = RicardoSavegh; (F)RICARDOSAYEGH
+DeyaniraMarrero = DeyanuraMarrero; DEYANIRAMARRERO; MARRERO,Deyanira
+RhytaRipa = RhyTaripa; (F)RHYTARIPA; RIPA,Rhyta; RhytaRipa
+FedericoMartinezGualco = FedericoMartínez, FedericoMartínezG
+ArmandoAgüero = ArmandoteAgüero
+
+# Additional corrections (Feb 2025)
+# ArantxaDelgado duplicates
+ArantxaDelgado = MariaDelgado
+
+# SeleneDelgado duplicates
+SeleneDelgado = GastónDelgado
+
+# Millán correction
+EufrasioMillán = AntonioMillán
+
+# Duplicate resolutions (Feb 2025)
+MaripiliGarcía = PiliGarcia
+NemeMoreno = NemesioMoreno
+BrandonUrielOliva = UrielOliva
+JoséLuisRodríguez = JoseLuisRodríguez

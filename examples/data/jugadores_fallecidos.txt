@@ -1,0 +1,2 @@
+# Jugadores fallecidos — ejemplo
+# Un nombre por línea (se excluyen del ranking final pero se incluyen en los cálculos)

@@ -1,0 +1,6 @@
+﻿Posición,Jugador,ELOD Inicial,Delta ELOD,ELOD Final,N. Oponentes,N. Partidas,Ultimo Torneo
+1,Alice,1800,+20,1820,4,1,game_test
+2,Bob,1800,+10,1810,4,1,game_test
+3,Charlie,1800,-0,1800,4,1,game_test
+4,Diana,1800,-10,1790,4,1,game_test
+5,Eve,1800,-20,1780,4,1,game_test

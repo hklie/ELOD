@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+
+# Generated output
+output/
+output.zip
+
+# Auto-generated combined manifest
+data/torneos_all.manifiesto
+
+# Claude Code
+.claude/

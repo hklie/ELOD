@@ -1,0 +1,10 @@
+# Alias de jugadores - unifica nombres con diferentes ortografías
+# Formato: nombre_canónico = alias1, alias2, ...
+# El nombre canónico (izquierda) será el que se use en los resultados
+
+AiranPérez = AiranPerez
+OscarDíaz = OscarDiaz
+SolangeDíaz = SolangeDiaz, Solange
+XavierPiqué = XaviPiqué
+JoséLima = JoseALima
+EduardoOrtiz = GastonOrtiz

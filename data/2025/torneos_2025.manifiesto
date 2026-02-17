@@ -1,0 +1,27 @@
+# Temporada de Torneos 2025
+# Formato: Fechas se especifican como DD-MM-YYYY seguido por el nombre del evento despues del caracter #
+# Torneos especificados por cada archivo adoptan el nombre despues de cada fecha.
+# Soporta: .mdb, .txt, .jpeg, .jpg, .png
+
+
+01-04-2025 # Cubascrabble Varadero 2025
+cubasbrabble bolsa completa 2025.mdb
+cubascrabble 12 rondas-1.mdb
+
+01-05-2025  # Austral Asunción 2025
+Austral_2025.jpeg
+
+01-06-2025  # Andino Lima 2025
+Andino_2025_Partida 1.jpeg
+Andino_2025_Partida 2.jpeg
+
+01-07-2025  # Norcenca Guanajuato 2025
+Norcenca_2025.txt
+
+1-08-2025 # Europeo Murcia 2025
+Europeo_2025.txt
+
+01-11-2025  # Mundial Santiago de Chile 2025
+Duplicada Mundial 1 - 2025.accdb
+Duplicada Mundial 2 - 2025.accdb
+Duplicada Mundial 3 - 2025.accdb

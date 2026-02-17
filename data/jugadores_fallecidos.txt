@@ -1,0 +1,7 @@
+# Jugadores fallecidos - excluidos de los rankings
+# Formato: un nombre canónico por línea
+
+FreddyRamírez
+EnriqueCortés
+MarthaGalindo
+Olek

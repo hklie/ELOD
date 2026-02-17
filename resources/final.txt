@@ -1,0 +1,5 @@
+Alice	1820	4	1	game_test.txt
+Bob	1810	4	1	game_test.txt
+Charlie	1800	4	1	game_test.txt
+Diana	1790	4	1	game_test.txt
+Eve	1780	4	1	game_test.txt

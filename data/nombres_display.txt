@@ -1,0 +1,24 @@
+# Nombres de display para apellidos compuestos
+# Formato: NombreCanónico = APELLIDO, Nombre
+# Usado cuando el algoritmo automático no puede detectar correctamente el apellido
+
+DavidLozanoGaray = LOZANO GARAY, David
+MaríaMartaGismondi = GISMONDI, María Marta
+MaríadeArcos = DE ARCOS, María
+MariaInesdelaCruz = DE LA CRUZ, María Inés
+RosariodelaCruz = DE LA CRUZ, María Rosario
+AmadoDelPino = DEL PINO, Amado
+FernandoReySaravia = REY SARAVIA, Fernando
+LauraGilCordero = GIL CORDERO, Laura
+HéctorPerezo = PEROZO, Héctor
+HéctorPerezoPulido = PEROZO PULIDO, Héctor Andrés
+JesúLuchini = LUCHINI, María de Jesús
+AgustínNoronha = NORONHA, Agustín
+VerónicaGiqueaux = GIQUEAUX, Verónica
+RicardoSayegh = SAYEGH, Ricardo
+FedericoMartinezGualco = MARTINEZ GUALCO, Federico
+DeyaniraMarrero = MARRERO, Deyanira
+RhytaRipa = RIPA, Rhyta
+ArmandoAgüero = AGÜERO, Armando
+RamónMelendez = MELENDEZ, Ramón
+BetoRomero = ROMERO, Alberto (Beto)

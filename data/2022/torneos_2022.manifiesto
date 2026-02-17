@@ -1,0 +1,23 @@
+# Temporada de Torneos 2022
+# Formato: Fechas se especifican como DD-MM-YYYY seguido por el nombre del evento despues del caracter #
+# Torneos especificados por cada archivo .mdb del DupMaster adoptan el nombre despues de cada fecha.
+# Soporta: .mdb, .txt, .jpeg, .jpg, .png
+
+1-04-2022  # Norcenca/Cubascrabble La Habana 2022
+Cubascrabble-Norcenca_2022_partida1.txt
+Cubascrabble-Norcenca_2022_partida2.txt
+
+1-05-2022  # Austral Asunción 2022
+Austral_2022.txt
+
+1-06-2022  # Andino Bogotá 2022
+Bogota_2022_Partida 1.jpeg
+Bogota_2022_Partida 2.jpeg
+
+1-07-2022  # Europeo Atenas 2022
+EuropeoAtenas2022Duplicada_finVersion.mdb
+
+2-10-2022  # Mundial Buenos Aires 2022
+PartidaBaAs1.mdb
+PartidaBaAs2.mdb
+PartidaBaAs3.mdb
