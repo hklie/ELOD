@@ -13,6 +13,8 @@ import sys
 from pathlib import Path
 from typing import List, Tuple
 
+from generate_progressive import ProgressiveElod
+
 
 def find_year_manifests(data_path: Path) -> List[Tuple[int, Path]]:
     """Find all year-specific manifest files, sorted by year."""
@@ -110,8 +112,6 @@ def generate_combined_manifest(data_path: Path, output_path: Path) -> int:
 
 def run_elod_processing(data_path: Path, output_path: Path):
     """Run the ELOD processing scripts."""
-    from generate_progressive import ProgressiveElod
-
     manifest = data_path / "torneos_all.manifiesto"
     aliases = data_path / "jugadores_all.alias"
     deceased = data_path / "jugadores_fallecidos.txt"
