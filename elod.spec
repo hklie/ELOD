@@ -1,14 +1,18 @@
 # -*- mode: python ; coding: utf-8 -*-
 # PyInstaller spec for building elod.exe
 
+import os
 from PyInstaller.utils.hooks import collect_data_files
 
 # openpyxl ships template files that must be bundled
 openpyxl_datas = collect_data_files('openpyxl')
 
+# Absolute path to the project root so PyInstaller finds local modules
+project_root = os.path.abspath('.')
+
 a = Analysis(
     ['regenerate_all.py'],
-    pathex=[],
+    pathex=[project_root],
     binaries=[],
     datas=openpyxl_datas,
     hiddenimports=[
