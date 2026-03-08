@@ -322,16 +322,12 @@ class ProgressiveElod:
         title_cell.alignment = center_align
         ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=total_cols)
 
-        # Row 2: Subtitle left + date right
-        subtitle_cell = ws.cell(row=2, column=1, value="Elo Duplicada - Ranking Internacional")
+        # Row 2: Subtitle + date, centered across full width (below Row 1 title, clear of logo)
+        subtitle_cell = ws.cell(row=2, column=1,
+                                value=f"Elo Duplicada - Ranking Internacional  —  Actualizado al {fecha}")
         subtitle_cell.font = Font(bold=True, size=12)
         subtitle_cell.alignment = center_align
-        ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=4)
-
-        date_cell = ws.cell(row=2, column=5, value=f"Actualizado al {fecha}")
-        date_cell.font = Font(bold=True, size=12)
-        date_cell.alignment = center_align
-        ws.merge_cells(start_row=2, start_column=5, end_row=2, end_column=8)
+        ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=total_cols)
 
         # Row 3: Empty separator
 
