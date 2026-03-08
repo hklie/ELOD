@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 from collections import OrderedDict
 from openpyxl import Workbook
+from openpyxl.drawing.image import Image as XlImage
 from openpyxl.styles import Font, Alignment, Border, Side, PatternFill
 from openpyxl.utils import get_column_letter
 
@@ -334,6 +335,14 @@ class ProgressiveElod:
 
         # Row 3: Empty separator
 
+        # Insert FILE logo at top-left
+        logo_path = Path(__file__).parent / "data" / "FILE1.jpg"
+        if logo_path.exists():
+            logo = XlImage(str(logo_path))
+            logo.width = 120
+            logo.height = 80
+            ws.add_image(logo, "A1")
+
         # --- Column headers (row 4) ---
         # Column order: A=Deltas acum, B=Pos, C=JUGADOR, D=País, E=ELOD Actual,
         #               F=Último Torneo, G=N.Oponentes, H=N.Partidas, I+=tournaments
@@ -403,8 +412,10 @@ class ProgressiveElod:
             country = self.country_data.get(name, "")
             ws.cell(row=row, column=4, value=country)
 
-            # E: ELOD Actual
-            ws.cell(row=row, column=5, value=round(player.elo)).alignment = center_align
+            # E: ELOD Actual (yellow highlight)
+            elo_cell = ws.cell(row=row, column=5, value=round(player.elo))
+            elo_cell.alignment = center_align
+            elo_cell.fill = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
 
             # F: Último Torneo
             ws.cell(row=row, column=6, value=player.last_tourney).alignment = center_align
