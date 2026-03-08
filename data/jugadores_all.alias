@@ -114,8 +114,8 @@ JosefinaTrelles = JOSEFINA
 JoséHernández = JOSEFERNANDEZ
 FernandoReySaravia = FERNADOREYSARAVIA
 VerónicaGigueaux = VERONICAGIQUEAUX
-HéctorPerezo = HECTORPEROZOHERNANDEZ
-HéctorPerezoPulido = HECTORANDREZPEROZOPULIDO
+HéctorPerezo = HéctorPerozo, HECTORPEROZOHERNANDEZ
+HéctorPerezoPulido = HéctorPerozoPulido, HECTORANDREZPEROZOPULIDO
 WilmaPulido = WILMAPULIDOPEROZO
 XavierPiqué = XAVIPIQUE
 DeyanuraMarrero = DEYANIRAMARRERO
@@ -323,7 +323,12 @@ JoséLuisRodríguez = JoseLuisRodríguez
 NaikenDelgado = NakosDelgado
 GladysMalavé = GladisMuñoz
 YugliColmenares = YojáColmenares
-LuncyGuías = LuncyGita
+LuncyGuía = LuncyGuías, LuncyGita
 
 # Accent corrections
 MónicaPenalba = MonicaPenalba
+
+# Andino 2023 txt corrections
+SusanaHarrington = SusanaHarringhton
+EvelisBresán = IsvelisBresán
+RicardoVillacis = RicardoVillacís
