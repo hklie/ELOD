@@ -335,6 +335,11 @@ class ProgressiveElod:
 
         # Row 3: Empty separator
 
+        # Set row heights so the logo doesn't overlap row 4
+        ws.row_dimensions[1].height = 35
+        ws.row_dimensions[2].height = 25
+        ws.row_dimensions[3].height = 25
+
         # Insert FILE logo at top-left
         logo_path = Path(__file__).parent / "data" / "FILE1.jpg"
         if logo_path.exists():
