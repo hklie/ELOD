@@ -298,8 +298,8 @@ BetoRomero = AlbertoDanielRomero
 AgustínNoronha = AgustínNoroña
 VerónicaGiqueaux = VerónicaGigueaux, VeronicaGuiqueaux, VERONICAGIQUEAUX
 RicardoSayegh = RicardoSavegh; (F)RICARDOSAYEGH
-DeyaniraMarrero = DeyanuraMarrero; DEYANIRAMARRERO; MARRERO,Deyanira
-RhytaRipa = RhyTaripa; (F)RHYTARIPA; RIPA,Rhyta; RhytaRipa
+DeyaniraMarrera = DeyanuraMarrero, DeyaniraMarrero, DoralisaMarrero, DEYANIRAMARRERO, MARRERO,Deyanira
+RhytaRipa = RhyTaripa, RilvaRaía, (F)RHYTARIPA, RIPA,Rhyta, RhytaRipa
 FedericoMartinezGualco = FedericoMartínez, FedericoMartínezG
 ArmandoAgüero = ArmandoteAgüero
 
@@ -318,3 +318,12 @@ MaripiliGarcía = PiliGarcia
 NemeMoreno = NemesioMoreno
 BrandonUrielOliva = UrielOliva
 JoséLuisRodríguez = JoseLuisRodríguez
+
+# Andino 2023 OCR corrections
+NaikenDelgado = NakosDelgado
+GladysMalavé = GladisMuñoz
+YugliColmenares = YojáColmenares
+LuncyGuías = LuncyGita
+
+# Accent corrections
+MónicaPenalba = MonicaPenalba
