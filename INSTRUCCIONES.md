@@ -1,6 +1,6 @@
 # ELOD - Sistema de Rating ELO para Torneos de Scrabble Duplicada
 
-**Versión 1.0 — Febrero 2026**
+**Versión 1.1 — Marzo 2026**
 
 ELOD es un calculador de ratings diseñado para **torneos de Scrabble Duplicada** organizados bajo el marco de FILE (Federación Internacional de Léxico en Español). Procesa resultados de torneos desde archivos de texto, bases de datos Microsoft Access e imágenes, y calcula y hace seguimiento de los ratings ELO de los jugadores a lo largo del tiempo.
 
@@ -357,9 +357,12 @@ El archivo `elod_final.csv` (producido por el último torneo procesado) contiene
 
 El archivo `elod_progresivos.xlsx` es un libro Excel consolidado que rastrea la progresión ELO de cada jugador a través de todos los torneos:
 
-- Una hoja por torneo, en orden cronológico
-- Cada hoja muestra nombres de jugadores, deltas ELO y ratings post-torneo
-- Celdas con código de colores y formato profesional para facilitar la lectura
+- **Encabezado institucional** con nombre de FILE, logo y fecha de generación dinámica (en español)
+- Orden de columnas: Deltas acumulados, Pos., JUGADOR, País, ELOD Actual (resaltado en amarillo), Último Torneo, N.Oponentes, N.Partidas, seguido de columnas de delta por torneo
+- **Encabezados de torneo en vertical** para visualización compacta de muchas columnas
+- Fila de conteo de participantes debajo de los encabezados
+- Celdas de delta con código de colores (verde para positivo, rojo para negativo)
+- Paneles congelados (primeras 3 columnas + primeras 5 filas) para navegación fácil
 
 ### Lista de Archivos de Salida (Ejemplo)
 
@@ -409,7 +412,8 @@ elod/
 │   ├── torneos_all.manifiesto     # Manifiesto combinado (auto-generado)
 │   ├── jugadores_all.alias        # Alias de nombres de jugadores
 │   ├── jugadores_fallecidos.txt   # Lista de jugadores fallecidos
-│   └── nombres_display.txt        # Nombres de visualización personalizados
+│   ├── nombres_display.txt        # Nombres de visualización personalizados
+│   └── FILE1.jpg                  # Logo de FILE para el encabezado Excel
 │
 ├── output/                  # Resultados generados
 │   ├── *.csv                # Archivos de ranking por torneo
@@ -503,3 +507,4 @@ CONEXIÓN CON EL SOFTWARE O EL USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.
 | Versión | Fecha | Descripción |
 |---------|-------|-------------|
 | 1.0 | Febrero 2026 | Lanzamiento público inicial |
+| 1.1 | Marzo 2026 | Encabezado Excel con título FILE, logo y fecha dinámica; columnas reordenadas; encabezados de torneo verticales; ELOD Actual resaltado en amarillo; nombres de torneos corregidos (Cuba Scrabble, Panamá, Castellón) |

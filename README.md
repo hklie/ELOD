@@ -412,7 +412,8 @@ elod/
 │   ├── torneos_all.manifiesto     # Combined manifest (auto-generated)
 │   ├── jugadores_all.alias        # Player name aliases
 │   ├── jugadores_fallecidos.txt   # Deceased players list
-│   └── nombres_display.txt        # Custom display names
+│   ├── nombres_display.txt        # Custom display names
+│   └── FILE1.jpg                  # FILE logo for Excel header
 │
 ├── output/                  # Generated results
 │   ├── *.csv                # Per-tournament ranking files
