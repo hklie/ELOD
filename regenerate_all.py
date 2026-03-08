@@ -116,6 +116,7 @@ def run_elod_processing(data_path: Path, output_path: Path):
     aliases = data_path / "jugadores_all.alias"
     deceased = data_path / "jugadores_fallecidos.txt"
     display_names = data_path / "nombres_display.txt"
+    country = data_path / "jugadores_pais.txt"
 
     # Generate elod_progresivos.xlsx (consolidated output with all data)
     print("\nGenerating elod_progresivos.xlsx...", flush=True)
@@ -126,6 +127,7 @@ def run_elod_processing(data_path: Path, output_path: Path):
         base_path=str(data_path),
         deceased_path=str(deceased) if deceased.exists() else None,
         display_names_path=str(display_names) if display_names.exists() else None,
+        country_path=str(country) if country.exists() else None,
     )
     prog.generate_excel(str(output_path / "elod_progresivos.xlsx"))
 

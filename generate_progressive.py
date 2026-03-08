@@ -35,6 +35,23 @@ def load_deceased_players(file_path: str) -> Set[str]:
     return deceased
 
 
+def load_country_data(file_path: str) -> Dict[str, str]:
+    """Load country of origin for each player."""
+    countries = {}
+    path = Path(file_path)
+    if not path.exists():
+        return countries
+
+    with open(path, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                canonical, country = line.split('=', 1)
+                countries[canonical.strip()] = country.strip()
+
+    return countries
+
+
 def load_display_names(file_path: str) -> Dict[str, str]:
     """Load custom display names for players with compound surnames."""
     display_names = {}
@@ -87,6 +104,7 @@ class ProgressiveElod:
         self.initial_elos: Dict[str, float] = {}
         self.deceased_players: Set[str] = set()
         self.display_names: Dict[str, str] = {}
+        self.country_data: Dict[str, str] = {}
 
     def process_tournaments(
         self,
@@ -94,7 +112,8 @@ class ProgressiveElod:
         alias_path: Optional[str] = None,
         base_path: Optional[str] = None,
         deceased_path: Optional[str] = None,
-        display_names_path: Optional[str] = None
+        display_names_path: Optional[str] = None,
+        country_path: Optional[str] = None
     ):
         """Process all tournaments and track deltas."""
 
@@ -113,6 +132,11 @@ class ProgressiveElod:
         if display_names_path:
             self.display_names = load_display_names(display_names_path)
             print(f"Loaded {len(self.display_names)} custom display names")
+
+        # Load country data
+        if country_path:
+            self.country_data = load_country_data(country_path)
+            print(f"Loaded {len(self.country_data)} player countries")
 
         # Load tournament list
         tournaments = parse_manifest(manifest_path, base_path)
@@ -278,9 +302,11 @@ class ProgressiveElod:
         )
 
         # Headers
-        headers = ["Deltas acumulados", "Pos.", "ELOD Actual", "N.Oponentes", "N.Partidas", "Ultimo Torneo", "JUGADOR"]
+        headers = ["Deltas acumulados", "Pos.", "ELOD Actual", "N.Oponentes", "N.Partidas", "Ultimo Torneo", "JUGADOR", "País"]
         tournament_columns = list(reversed(self.tournament_order))
         headers.extend(tournament_columns)
+        # Column where tournament data starts (after País)
+        tournament_start_col = 9
 
         # Write headers
         for col, header in enumerate(headers, 1):
@@ -297,8 +323,9 @@ class ProgressiveElod:
         cell = ws.cell(row=2, column=7, value="Participantes")
         cell.font = Font(bold=True, italic=True)
         cell.fill = participant_fill
+        ws.cell(row=2, column=8, value="").fill = participant_fill  # País column
 
-        for col, tournament in enumerate(tournament_columns, 8):
+        for col, tournament in enumerate(tournament_columns, tournament_start_col):
             count = self.tournament_participants.get(tournament, 0)
             cell = ws.cell(row=2, column=col, value=count)
             cell.alignment = center_align
@@ -347,8 +374,12 @@ class ProgressiveElod:
             formatted_name = name_to_lastname_firstname(name, self.display_names)
             ws.cell(row=row, column=7, value=formatted_name)
 
-            # Tournament deltas (start at column 8)
-            for col, tournament in enumerate(tournament_columns, 8):
+            # Country of origin
+            country = self.country_data.get(name, "")
+            ws.cell(row=row, column=8, value=country)
+
+            # Tournament deltas (start at column 9)
+            for col, tournament in enumerate(tournament_columns, tournament_start_col):
                 delta = self.tournament_deltas.get(tournament, {}).get(name)
                 if delta is not None:
                     cell = ws.cell(row=row, column=col, value=round(delta))
@@ -366,11 +397,12 @@ class ProgressiveElod:
         ws.column_dimensions['E'].width = 10  # N.Partidas
         ws.column_dimensions['F'].width = 28  # Ultimo Torneo
         ws.column_dimensions['G'].width = 25  # JUGADOR
-        for col in range(8, len(headers) + 1):
+        ws.column_dimensions['H'].width = 18  # País
+        for col in range(tournament_start_col, len(headers) + 1):
             ws.column_dimensions[get_column_letter(col)].width = 18
 
-        # Freeze panes (freeze after header and participant rows, and player name column)
-        ws.freeze_panes = 'H3'
+        # Freeze panes (freeze after header and participant rows, and País column)
+        ws.freeze_panes = 'I3'
 
         wb.save(output_path)
         print(f"Excel file saved to: {output_path}")
@@ -386,6 +418,7 @@ def main():
     parser.add_argument('--base-path', '-b', help='Base path for tournament files')
     parser.add_argument('--deceased', '-d', help='File with deceased players to exclude')
     parser.add_argument('--display-names', '-n', help='File with custom display names')
+    parser.add_argument('--country', '-c', help='File with player country data')
 
     args = parser.parse_args()
 
@@ -398,7 +431,8 @@ def main():
         alias_path=args.aliases,
         base_path=args.base_path,
         deceased_path=args.deceased,
-        display_names_path=args.display_names
+        display_names_path=args.display_names,
+        country_path=args.country
     )
     prog.generate_excel(str(output_path))
 

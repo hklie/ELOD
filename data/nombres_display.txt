@@ -16,9 +16,64 @@ JesúLuchini = LUCHINI, María de Jesús
 AgustínNoronha = NORONHA, Agustín
 VerónicaGiqueaux = GIQUEAUX, Verónica
 RicardoSayegh = SAYEGH, Ricardo
-FedericoMartinezGualco = MARTINEZ GUALCO, Federico
+FedericoMartinezGualco = MARTÍNEZ GUALCO, Federico
 DeyaniraMarrero = MARRERO, Deyanira
 RhytaRipa = RIPA, Rhyta
 ArmandoAgüero = AGÜERO, Armando
-RamónMelendez = MELENDEZ, Ramón
+RamónMelendez = MELÉNDEZ, Ramón
 BetoRomero = ROMERO, Alberto (Beto)
+BetoMora = MORA, Luis Alberto (Beto)
+
+# Accent corrections
+CarlosGarcia = GARCÍA, Carlos
+EnricHernandez = HERNÁNDEZ, Enric
+AntonioAlvarez = ÁLVAREZ, Antonio
+JoanLazaro = LÁZARO, Joan
+JuanGarcia = GARCÍA, Juan
+RaulCarrillo = CARRILLO, Raúl
+JesusFlores = FLORES, Jesús
+EduardoVazquez = VÁZQUEZ, Eduardo
+AlejandroBenitez = BENÍTEZ, Alejandro
+HéctorKlie = KLÍE, Héctor
+MatíasGonzalez = GONZÁLEZ, Matías
+AlejandroGamez = GÁMEZ, Alejandro
+RicardoVillacis = VILLACÍS, Ricardo
+IsaíasFalcon = FALCÓN, Isaías
+JoseCortada = CORTADA, José
+EduardoLazdin = LAZDÍN, Eduardo
+VictorMarquez = MÁRQUEZ, Víctor
+OscarDíaz = DÍAZ, Óscar
+CeliaAvila = ÁVILA, Celia
+OctavioRodriguez = RODRÍGUEZ, Octavio
+AlbertoRodriguez = RODRÍGUEZ, Alberto
+BeatrizGutierrez = GUTIÉRREZ, Beatriz
+XavierRendon = RENDÓN, Xavier
+NelsonVerastegui = VERÁSTEGUI, Nelson
+ConiVerastegui = VERÁSTEGUI, Coni
+InmaGonzalez = GONZÁLEZ, Inma
+CristinaSanchez = SÁNCHEZ, Cristina
+JaneyAvila = ÁVILA, Janey
+SusanaHarrington = HARRINGHTON, Susana
+
+# Compound first name spacing
+JuanCarlosAyala = AYALA, Juan Carlos
+JoseVicenteGil = GIL, José Vicente
+LucasMateoLozano = LOZANO, Lucas Mateo
+JuanJoséMula = MULA, Juan José
+CarmenElenaSalas = SALAS, Carmen Elena
+MiguelÁngelHenares = HENARES, Miguel Ángel
+HectorEduardoMoreno = MORENO, Héctor Eduardo
+BrandonUrielOliva = OLIVA, Brandon Uriel
+MaríaAlejandraGarcía = GARCÍA, María Alejandra
+JoséLuisRodríguez = RODRÍGUEZ, José Luis
+AnaLucíaGómez = GÓMEZ, Ana Lucía
+JoseMariaRiera = RIERA, José María
+
+# Display name corrections
+NemeMoreno = MORENO, Nemesio
+DiegoMartinezViademonte = MARTÍNEZ VIADEMONTE, Diego
+MiguelMuñoz = MUÑOZ, Miguel Carlos
+SocratisAlichanidis = ALICHANIDIS, Sokratis
+FcoJavierGuerrero = GUERRERO, Francisco Javier
+AlejandroGonzalez = GONZÁLEZ ROMERO, Alejandro
+EvelisBresán = BRESSÁN, Isvelis
