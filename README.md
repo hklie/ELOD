@@ -1,6 +1,6 @@
 # ELOD - ELO Rating System for Duplicate Scrabble Tournaments
 
-**Version 1.0 — February 2026**
+**Version 1.1 — March 2026**
 
 ELOD is a rating calculator designed for **Scrabble Duplicate tournaments** organized under the FILE (Federacion Internacional de Lexico en Espanol) framework. It processes tournament results from text files, Microsoft Access databases, and images, then calculates and tracks player ELO ratings over time.
 
@@ -357,9 +357,12 @@ The file `elod_final.csv` (produced by the last tournament processed) contains t
 
 The file `elod_progresivos.xlsx` is a consolidated Excel workbook that tracks every player's ELO progression across all tournaments:
 
-- One sheet per tournament, in chronological order
-- Each sheet shows player names, ELO deltas, and post-tournament ratings
-- Color-coded cells and professional formatting for readability
+- **Title header** with FILE institution name and dynamic generation date (in Spanish)
+- Column order: Deltas acumulados, Pos., JUGADOR, País, ELOD Actual, Último Torneo, N.Oponentes, N.Partidas, followed by per-tournament delta columns
+- **Vertical tournament headers** for compact display of many tournament columns
+- Participant count row below the headers
+- Color-coded delta cells (green for positive, red for negative)
+- Frozen panes (first 3 columns + first 5 rows) for easy navigation
 
 ### Output File List (Example)
 
@@ -504,3 +507,4 @@ SOFTWARE.
 | Version | Date | Description |
 |---------|------|-------------|
 | 1.0 | February 2026 | Initial public release |
+| 1.1 | March 2026 | Excel header with FILE title and dynamic date, reordered columns, vertical tournament headers, corrected tournament names (Cuba Scrabble, Panamá, Castellón) |

@@ -4,6 +4,7 @@ Generate progressive ELOD Excel file showing delta per player per tournament.
 """
 
 import re
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 from collections import OrderedDict
@@ -290,6 +291,15 @@ class ProgressiveElod:
         ws = wb.active
         ws.title = "ELOD Progresivos"
 
+        # Spanish month names for dynamic date
+        MESES = {
+            1: "enero", 2: "febrero", 3: "marzo", 4: "abril",
+            5: "mayo", 6: "junio", 7: "julio", 8: "agosto",
+            9: "septiembre", 10: "octubre", 11: "noviembre", 12: "diciembre"
+        }
+        now = datetime.now()
+        fecha = f"{now.day} de {MESES[now.month]} de {now.year}"
+
         # Styles
         header_font = Font(bold=True, size=10)
         header_fill = PatternFill(start_color="CCCCCC", end_color="CCCCCC", fill_type="solid")
@@ -301,38 +311,67 @@ class ProgressiveElod:
             bottom=Side(style='thin')
         )
 
-        # Headers
-        headers = ["Deltas acumulados", "Pos.", "ELOD Actual", "N.Oponentes", "N.Partidas", "Ultimo Torneo", "JUGADOR", "País"]
+        # --- Title rows (rows 1-3) ---
         tournament_columns = list(reversed(self.tournament_order))
+        total_cols = 8 + len(tournament_columns)
+
+        # Row 1: Institution name
+        title_cell = ws.cell(row=1, column=1, value="Federación Internacional de Léxico en Español (FILE)")
+        title_cell.font = Font(bold=True, size=14)
+        title_cell.alignment = center_align
+        ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=total_cols)
+
+        # Row 2: Subtitle left + date right
+        subtitle_cell = ws.cell(row=2, column=1, value="Elo Duplicada - Ranking Internacional")
+        subtitle_cell.font = Font(bold=True, size=12)
+        subtitle_cell.alignment = center_align
+        ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=4)
+
+        date_cell = ws.cell(row=2, column=5, value=f"Actualizado al {fecha}")
+        date_cell.font = Font(bold=True, size=12)
+        date_cell.alignment = center_align
+        ws.merge_cells(start_row=2, start_column=5, end_row=2, end_column=8)
+
+        # Row 3: Empty separator
+
+        # --- Column headers (row 4) ---
+        # Column order: A=Deltas acum, B=Pos, C=JUGADOR, D=País, E=ELOD Actual,
+        #               F=Último Torneo, G=N.Oponentes, H=N.Partidas, I+=tournaments
+        headers = ["Deltas acumulados", "Pos.", "JUGADOR", "País", "ELOD Actual",
+                    "Último Torneo", "N.Oponentes", "N.Partidas"]
         headers.extend(tournament_columns)
-        # Column where tournament data starts (after País)
         tournament_start_col = 9
 
-        # Write headers
         for col, header in enumerate(headers, 1):
-            cell = ws.cell(row=1, column=col, value=header)
+            cell = ws.cell(row=4, column=col, value=header)
             cell.font = header_font
             cell.fill = header_fill
             cell.alignment = center_align
             cell.border = thin_border
 
-        # Write participant counts row
+        # Vertical text for tournament column headers
+        vertical_align = Alignment(horizontal='center', vertical='center', textRotation=90)
+        for col in range(tournament_start_col, len(headers) + 1):
+            ws.cell(row=4, column=col).alignment = vertical_align
+
+        # --- Participant counts row (row 5) ---
         participant_fill = PatternFill(start_color="E6E6FA", end_color="E6E6FA", fill_type="solid")
-        for col in range(1, 7):  # Columns 1-6 (before JUGADOR)
-            ws.cell(row=2, column=col, value="").fill = participant_fill
-        cell = ws.cell(row=2, column=7, value="Participantes")
+        for col in range(1, 3):  # Columns A-B empty
+            ws.cell(row=5, column=col, value="").fill = participant_fill
+        cell = ws.cell(row=5, column=3, value="Participantes")
         cell.font = Font(bold=True, italic=True)
         cell.fill = participant_fill
-        ws.cell(row=2, column=8, value="").fill = participant_fill  # País column
+        for col in range(4, 9):  # Columns D-H empty
+            ws.cell(row=5, column=col, value="").fill = participant_fill
 
         for col, tournament in enumerate(tournament_columns, tournament_start_col):
             count = self.tournament_participants.get(tournament, 0)
-            cell = ws.cell(row=2, column=col, value=count)
+            cell = ws.cell(row=5, column=col, value=count)
             cell.alignment = center_align
             cell.fill = participant_fill
             cell.font = Font(italic=True)
 
-        # Sort players by ELO descending, excluding deceased
+        # --- Player data (row 6+) ---
         sorted_players = sorted(
             [(name, player) for name, player in self.players.items()
              if name not in self.deceased_players],
@@ -344,10 +383,8 @@ class ProgressiveElod:
             excluded = len(self.players) - len(sorted_players)
             print(f"Excluded {excluded} deceased players from rankings")
 
-        # Write player data (start at row 3 due to participant count row)
-        for row, (name, player) in enumerate(sorted_players, 3):
-            # Cumulative delta = sum of rounded individual tournament deltas
-            # This ensures the sum of columns matches the cumulative delta
+        for row, (name, player) in enumerate(sorted_players, 6):
+            # A: Cumulative delta
             cumulative_delta = 0
             for tournament in self.tournament_order:
                 delta = self.tournament_deltas.get(tournament, {}).get(name)
@@ -355,30 +392,30 @@ class ProgressiveElod:
                     cumulative_delta += round(delta)
             ws.cell(row=row, column=1, value=cumulative_delta).alignment = center_align
 
-            # Position (row-2 because row 1=header, row 2=participants)
-            ws.cell(row=row, column=2, value=f"{row-2}°").alignment = center_align
+            # B: Position (row-5 because rows 1-3=title, 4=header, 5=participants)
+            ws.cell(row=row, column=2, value=f"{row-5}°").alignment = center_align
 
-            # Current ELO
-            ws.cell(row=row, column=3, value=round(player.elo)).alignment = center_align
+            # C: JUGADOR
+            formatted_name = name_to_lastname_firstname(name, self.display_names)
+            ws.cell(row=row, column=3, value=formatted_name)
 
-            # N.Oponentes (number of games/opponents)
-            ws.cell(row=row, column=4, value=player.games).alignment = center_align
+            # D: País
+            country = self.country_data.get(name, "")
+            ws.cell(row=row, column=4, value=country)
 
-            # N.Partidas (number of tournaments)
-            ws.cell(row=row, column=5, value=player.tourneys).alignment = center_align
+            # E: ELOD Actual
+            ws.cell(row=row, column=5, value=round(player.elo)).alignment = center_align
 
-            # Ultimo Torneo (last tournament played)
+            # F: Último Torneo
             ws.cell(row=row, column=6, value=player.last_tourney).alignment = center_align
 
-            # Player name (use custom display name if available)
-            formatted_name = name_to_lastname_firstname(name, self.display_names)
-            ws.cell(row=row, column=7, value=formatted_name)
+            # G: N.Oponentes
+            ws.cell(row=row, column=7, value=player.games).alignment = center_align
 
-            # Country of origin
-            country = self.country_data.get(name, "")
-            ws.cell(row=row, column=8, value=country)
+            # H: N.Partidas
+            ws.cell(row=row, column=8, value=player.tourneys).alignment = center_align
 
-            # Tournament deltas (start at column 9)
+            # I+: Tournament deltas
             for col, tournament in enumerate(tournament_columns, tournament_start_col):
                 delta = self.tournament_deltas.get(tournament, {}).get(name)
                 if delta is not None:
@@ -392,17 +429,17 @@ class ProgressiveElod:
         # Column widths
         ws.column_dimensions['A'].width = 12  # Deltas acumulados
         ws.column_dimensions['B'].width = 6   # Pos.
-        ws.column_dimensions['C'].width = 10  # ELOD Actual
-        ws.column_dimensions['D'].width = 12  # N.Oponentes
-        ws.column_dimensions['E'].width = 10  # N.Partidas
-        ws.column_dimensions['F'].width = 28  # Ultimo Torneo
-        ws.column_dimensions['G'].width = 25  # JUGADOR
-        ws.column_dimensions['H'].width = 18  # País
+        ws.column_dimensions['C'].width = 25  # JUGADOR
+        ws.column_dimensions['D'].width = 18  # País
+        ws.column_dimensions['E'].width = 10  # ELOD Actual
+        ws.column_dimensions['F'].width = 28  # Último Torneo
+        ws.column_dimensions['G'].width = 12  # N.Oponentes
+        ws.column_dimensions['H'].width = 10  # N.Partidas
         for col in range(tournament_start_col, len(headers) + 1):
-            ws.column_dimensions[get_column_letter(col)].width = 18
+            ws.column_dimensions[get_column_letter(col)].width = 5
 
-        # Freeze panes (freeze after header and participant rows, and País column)
-        ws.freeze_panes = 'I3'
+        # Freeze panes (freeze first 3 columns and first 5 rows)
+        ws.freeze_panes = 'D6'
 
         wb.save(output_path)
         print(f"Excel file saved to: {output_path}")
