@@ -58,7 +58,7 @@ SusanaHarrington = HARRINGHTON, Susana
 # Compound first name spacing
 JuanCarlosAyala = AYALA, Juan Carlos
 JoseVicenteGil = GIL, José Vicente
-LucasMateoLozano = LOZANO, Lucas Mateo
+LucasMateoLozano = LOZANO GARAY, Lucas
 JuanJoséMula = MULA, Juan José
 CarmenElenaSalas = SALAS, Carmen Elena
 MiguelÁngelHenares = HENARES, Miguel Ángel
@@ -68,6 +68,7 @@ MaríaAlejandraGarcía = GARCÍA, María Alejandra
 JoséLuisRodríguez = RODRÍGUEZ, José Luis
 AnaLucíaGómez = GÓMEZ, Ana Lucía
 JoseMariaRiera = RIERA, José María
+LuzMaríaLópez = LÓPEZ, Luz María
 
 # Display name corrections
 NemeMoreno = MORENO, Nemesio
@@ -75,5 +76,5 @@ DiegoMartinezViademonte = MARTÍNEZ VIADEMONTE, Diego
 MiguelMuñoz = MUÑOZ, Miguel Carlos
 SocratisAlichanidis = ALICHANIDIS, Sokratis
 FcoJavierGuerrero = GUERRERO, Francisco Javier
-AlejandroGonzalez = GONZÁLEZ ROMERO, Alejandro
+AlejandroGonzálezRomero = GONZÁLEZ ROMERO, Alejandro
 EvelisBresán = BRESSÁN, Isvelis

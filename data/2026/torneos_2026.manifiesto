@@ -1,0 +1,8 @@
+# Temporada de Torneos 2026
+# Formato: Fechas se especifican como DD-MM-YYYY seguido por el nombre del evento despues del caracter #
+# Torneos especificados por cada archivo adoptan el nombre despues de cada fecha.
+# Soporta: .mdb, .txt, .jpeg, .jpg, .png
+
+
+24-05-2026 # Torneo Austral Chile 2026
+Duplicada_Austral_2026.txt

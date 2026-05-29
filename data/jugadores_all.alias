@@ -20,7 +20,7 @@ JoseMariaRiera = JoseMaríaRiera
 AlbertoRodriguez = AlbertoRodríguez
 
 # Accent variations detected by --check-names
-AdriánBalajovsky = AdrianBalajovsky
+AdrianBalajovski = AdriánBalajovsky, AdrianBalajovsky
 BenjamínOlaizola = BenjaminOlaizola
 CésarAlmengor = CesarAlmengor
 EduardoFernández = EduardoFernandez
@@ -48,7 +48,7 @@ KarlaChowell = KarlaAChowell, KARLACHOWELL
 # 2024 UPPERCASE variations
 SergeEmig = SERGEEMIG
 ArantxaDelgado = ARANTXADELGADO
-CristinaSanchez = CRISTINASANCHEZ
+CristinaSanchez = CristinaSánchez, CRISTINASANCHEZ
 JuanGarcia = JUANGARCIA
 VicentaMansilla = VICENTAMANSILLA
 EnricHernandez = EnricHernández
@@ -101,7 +101,7 @@ HéctorKlie = (F)HECTORKLIE
 YolandaHackshaw = (F)YOLANDAHACKSHAW
 AlejandroTerenzani = (F)ALEJANDROTERENZANI
 RosarioSuárez = (F)ROSARIOSUAREZ
-AdriánBalajovsky = AdrianBajalovski, (F)ADRIANBALAJOVSKY
+AdrianBalajovski = AdrianBajalovski, (F)ADRIANBALAJOVSKY
 IsabelRodrigo = (F)ISABELRODRIGO
 JoseVicenteGil = (F)JOSEVICENTEGIL
 MerryWheaton = (F)MERRYWHEATON
@@ -118,7 +118,7 @@ HéctorPerezo = HéctorPerozo, HECTORPEROZOHERNANDEZ
 HéctorPerezoPulido = HéctorPerozoPulido, HECTORANDREZPEROZOPULIDO
 WilmaPulido = WILMAPULIDOPEROZO
 XavierPiqué = XAVIPIQUE
-DeyanuraMarrero = DEYANIRAMARRERO
+DeyaniraMarrero = DEYANIRAMARRERO
 FcoJavierGuerrero = JavierGuerrero
 JoséLima = JoseLima
 
@@ -155,7 +155,6 @@ YvetteBlanco = (F)YVETTEBLANCO
 JesúLuchini = (F)JESULUCHINI
 FernandoManrique = FERNANDOMANRIQUE
 MiguelÁngelHenares = MIGUELANGELHENARES
-RhyTaripa = (F)RHYTARIPA
 LigiaGalindo = LIGIAGALINDO
 MaripiliGarcía = MARIPILIGARCIA
 
@@ -169,12 +168,11 @@ YosvanyMontout = YosvaniMontout
 DiosbelSarduy = DiosbellSarduy
 AntonioCatalá = AntonioCatala
 JoséGonzález = JoseGonzalez
-AdriánBalajovsky = AdrianBalajoski
+AdrianBalajovski = AdrianBalajoski
 
 # 2025 Mundial Santiago de Chile (LASTNAME,Firstname format)
 # Use semicolons (;) as delimiter when aliases contain commas
 JesúsOrtega = JesusOrtega; ORTEGA,Jesús
-RhyTaripa = RhytaRipa; RIPA,Rhyta
 RubénFalconett = RubenFalconet
 RosariodelaCruz = DelaCruzRosario; DELACRUZ,Rosario
 VerónicaGigueaux = VeronicaGuiqueaux
@@ -185,7 +183,7 @@ JoséGonzález = GONZALEZ,J; GONZALEZ,José
 # Single aliases with commas need semicolon prefix to prevent comma splitting
 RaquelTopel = ;TOPEL,Raquel
 KunihikoKuroda = ;KURODA,Kunihiko
-DeyanuraMarrero = ;MARRERO,Deyanira
+DeyaniraMarrero = ;MARRERO,Deyanira
 RolandoGuevara = ;GUEVARA,Rolando
 LilianaSandi = ;SANDI,Liliana
 
@@ -244,7 +242,7 @@ AlejandroPorto = Porto
 RichardVelázquez = Richard
 IsaacFalconer = Falconer
 AlejandroBenitez = Benitez
-AdriánBalajovsky = Adrian
+AdrianBalajovski = Adrian
 MarcosPantoja = Marcos
 YosvanyMontout = Yosvani
 LuarBáez = Luar
@@ -298,8 +296,8 @@ BetoRomero = AlbertoDanielRomero
 AgustínNoronha = AgustínNoroña
 VerónicaGiqueaux = VerónicaGigueaux, VeronicaGuiqueaux, VERONICAGIQUEAUX
 RicardoSayegh = RicardoSavegh; (F)RICARDOSAYEGH
-DeyaniraMarrero = DeyanuraMarrero, DeyaniraMarrera, DoralisaMarrero, DEYANIRAMARRERO, MARRERO,Deyanira
-RhytaRipa = RhyTaripa, RilvaRaía, (F)RHYTARIPA, RIPA,Rhyta, RhytaRipa
+DeyaniraMarrero = DeyanuraMarrero, DeyanuraMarrera, DeyaniraMarrera, DoralisaMarrero, DEYANIRAMARRERO, MARRERO,Deyanira
+RhytaRipa = RhyTaripa; RhytaLipa; LipaRhyta; RilvaRaía; RHYTARIPA; (F)RHYTARIPA; RIPA,Rhyta; RIPA,RHYTA; LIPA,Rhyta; TARIPA,Rhy; TARIPA,RHY
 FedericoMartinezGualco = FedericoMartínez, FedericoMartínezG
 ArmandoAgüero = ArmandoteAgüero
 
@@ -332,3 +330,11 @@ MónicaPenalba = MonicaPenalba
 SusanaHarrington = SusanaHarringhton
 EvelisBresán = IsvelisBresán
 RicardoVillacis = RicardoVillacís
+
+# Name corrections
+MarianaNalé = MarianaNale
+RafaelMasdíaz = RafaelMasdiaz
+MarivíGil = MariviGil
+AlejandroGonzálezRomero = AlejandroGonzalez, AlejandroGonzález
+JesúsFlores = JesusFlores
+AlejandroGámez = AlejandroGamez

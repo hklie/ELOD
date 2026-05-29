@@ -336,8 +336,8 @@ class ProgressiveElod:
         ws.row_dimensions[2].height = 25
         ws.row_dimensions[3].height = 25
 
-        # Insert FILE logo at top-left
-        logo_path = Path(__file__).parent / "data" / "FILE1.jpg"
+        # Insert logo at top-left
+        logo_path = Path(__file__).parent / "data" / "GRIS NARANJA SIN FONDO.png"
         if logo_path.exists():
             logo = XlImage(str(logo_path))
             logo.width = 120

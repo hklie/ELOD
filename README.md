@@ -270,6 +270,32 @@ python regenerate_all.py --manifest-only
 python regenerate_all.py --data-path data --output-path output
 ```
 
+### Check a New Tournament Before Regenerating (recommended)
+
+Whenever you add a new tournament, run `check_new_tournament.py` first to catch
+mistakes before updating the ELOs. **It never modifies any output file** — it only reports.
+
+```bash
+# Auto-detect new files (present in a year manifest but not yet in
+# data/torneos_all.manifiesto):
+python check_new_tournament.py
+
+# Or check a specific file:
+python check_new_tournament.py "data/2026/Duplicada_Austral_2026.txt"
+```
+
+It performs QC and reports:
+1. **ERROR** — a player listed twice in the roster (after alias resolution).
+2. **ERROR** — a "new" name that is an accent/case variant of an existing player
+   (missing alias → would create a duplicate).
+3. **WARNING** — a new name very similar to an existing one (possible typo).
+4. **WARNING** — a new player with no country in `jugadores_pais.txt`.
+5. Lists the **new players** (first appearance) and shows a **before vs. after**
+   ELO preview (tournament roster and top 15).
+
+The script exits non-zero if there are errors. Once the report is clean, run
+`python regenerate_all.py` to update the ELOs.
+
 ### Running Individual Components
 
 **Process tournaments from a manifest:**

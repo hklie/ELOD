@@ -270,6 +270,32 @@ python regenerate_all.py --manifest-only
 python regenerate_all.py --data-path data --output-path output
 ```
 
+### Verificar un Torneo Nuevo Antes de Regenerar (recomendado)
+
+Cada vez que agregues un torneo nuevo, ejecuta primero `check_new_tournament.py`
+para detectar errores antes de actualizar los ELOs. **No modifica ningún archivo de salida**; solo informa.
+
+```bash
+# Detecta automáticamente los archivos nuevos (presentes en un manifiesto de año
+# pero aún no en data/torneos_all.manifiesto):
+python check_new_tournament.py
+
+# O verifica un archivo específico:
+python check_new_tournament.py "data/2026/Duplicada_Austral_2026.txt"
+```
+
+Realiza control de calidad (QC) y reporta:
+1. **ERROR** — un jugador aparece dos veces en la planilla (tras resolver alias).
+2. **ERROR** — un nombre "nuevo" es una variante de acento/mayúsculas de un jugador
+   existente (falta un alias → crearía un duplicado).
+3. **ADVERTENCIA** — un nombre nuevo se parece mucho a uno existente (posible typo).
+4. **ADVERTENCIA** — un jugador nuevo no tiene país asignado en `jugadores_pais.txt`.
+5. Lista los **jugadores nuevos** (primera aparición) y muestra una vista previa
+   del ELO **antes vs. después** (planilla del torneo y top 15).
+
+El script termina con código distinto de cero si hay errores. Cuando el reporte
+esté limpio, ejecuta `python regenerate_all.py` para actualizar los ELOs.
+
 ### Ejecutar Componentes Individuales
 
 **Procesar torneos desde un manifiesto:**
