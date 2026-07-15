@@ -247,3 +247,7 @@ MeryLugo = Venezuela
 CarlosGámez = Chile
 LuisReyes = Chile
 GabrielGonzález = Chile
+
+# Europeo Montpellier 2026 - new players
+AudreyLellouche = Francia
+RamónSola = España
